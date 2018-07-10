@@ -7,6 +7,7 @@ namespace game
 class TwentyFourPoint
 {
 private:
+    unsigned int question_[4];
     unsigned int retry_cnt_;
     unsigned int game_cnt_;
     unsigned int game_mode_;
@@ -16,11 +17,11 @@ private:
 public:
     TwentyFourPoint();
     ~TwentyFourPoint();
-    Init();
-    Init(const std::string& mode,
+    int Init();
+    int Init(const std::string& mode,
          unsigned int retry, unsigned int game,
          bool show_ans, bool filter_on);
-    Start();
+    void Start();
 private:
     void SingleGameWrapper();
     void PrintStartInfo();
