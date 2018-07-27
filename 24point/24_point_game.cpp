@@ -1,4 +1,11 @@
+/**
+ * @file 24_point_game.cpp
+ * @brief 24点游戏类实现
+ * @author Pboy <prudent_boy@163.com>
+ */
+
 #include "24_point_game.h"
+#include "generate_question.h"
 
 namespace game
 {
@@ -36,8 +43,10 @@ int TwentyFourPoint::Init(const std::string& mode,
 
 void TwentyFourPoint::PrintStartInfo()
 {
-    std::cout << "Welcome to 24-point Game
+    std::cout << "Welcome to 24-point Game"
+	      << std::endl;
 }
+
 void TwentyFourPoint::Start()
 {
     PrintStartInfo();
@@ -50,7 +59,7 @@ void TwentyFourPoint::Start()
     }
     else
     {
-	int play_cnt = game_cnt;
+	int play_cnt = game_cnt_;
 	while (play_cnt > 0)
 	{
 	    if (SingleGameWrapper() != 0) break;
@@ -61,26 +70,16 @@ void TwentyFourPoint::Start()
     return;
 }
 
+void TwentyFourPoint::PrintEndInfo()
+{
+    std::cout << "Thanks for playing 24 point."
+	      << std::endl;
+}
+
 void TwentyFourPoint::SingleGameWrapper()
 {
-    
-}
-    unsigned int question_[4];
-    unsigned int retry_cnt_;
-    bool show_answer_;
-    bool filter_no_solution_;
-public:
-private:
-    void SingleGameWrapper();
-    void PrintStartInfo();
-    void PrintEndInfo();
-    void PrintSuccessInfo();
-    void PrintFailInfo();
-    void GenerateQuestion();
-    bool IsValidInput(const std::string& input);
-    double GetInputAnswer(const std::string& input);
+    std::vector<int>
 }
 
 }
 
-#endif

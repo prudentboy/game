@@ -1,3 +1,9 @@
+/**
+ * @file 24_point_game.h
+ * @brief 24点游戏类定义
+ * @author Pboy <prudent_boy@163.com>
+ */
+
 #ifndef 24_GAME_POINT_H
 #define 24_GAME_POINT_H
 
