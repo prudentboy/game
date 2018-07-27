@@ -19,9 +19,9 @@ int MathFromString::SimpleMath(const std::string& str)
 
     std::vector<MathExpUni> union_vec;
     std::stack<char> exp_stack;
-    int tmp = 0;
+    //int tmp = 0;
     MathExpUni tmp_uni;
-    for(auto i = 0; i < trim_str.size(); ++i)
+    for(size_t i = 0; i < trim_str.size(); ++i)
     {
         if (isdigit(trim_str[i]))
         {
