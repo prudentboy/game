@@ -17,6 +17,7 @@ public:
     CardBase(const std::string& description) : description_(description) {}
     CardBase(std::string&& description) : description_(std::move(description)) {}
     virtual ~CardBase() = default;
+
 private:
     std::string description_;
 };
