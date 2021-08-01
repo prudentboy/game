@@ -4,9 +4,15 @@
 
 #include <string>
 
+#include "common.h"
+
 namespace game {
 namespace console {
 namespace element {
+
+union SkillParam {
+    int8_t hp_delta;
+};
 
 class SkillBase {
 public:
@@ -19,6 +25,9 @@ public:
 private:
     std::string name_;
     std::string description_;
+
+public:
+    static std::unique_ptr<SkillBase> CreateSkill(SkillType type, SkillParam param);
 };
 
 }
