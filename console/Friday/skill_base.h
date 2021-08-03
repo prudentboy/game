@@ -10,10 +10,6 @@ namespace game {
 namespace console {
 namespace element {
 
-union SkillParam {
-    int8_t hp_delta;
-};
-
 class SkillBase {
 public:
     SkillBase() = default;
@@ -27,7 +23,7 @@ private:
     std::string description_;
 
 public:
-    static std::unique_ptr<SkillBase> CreateSkill(SkillType type, SkillParam param);
+    static std::unique_ptr<SkillBase> CreateSkill(SkillType type);
 };
 
 }

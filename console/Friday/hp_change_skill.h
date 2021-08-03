@@ -11,10 +11,16 @@ namespace friday {
 class FridayHPChangeSkill : public SkillBase {
 public:
     FridayHPChangeSkill() = default;
-    FridayHPChangeSkill(const std::string& name, const std::string& description, int8_t hp_delta = 0) : SkillBase(name, description), hp_delta_(hp_delta) {}
-    FridayHPChangeSkill(std::string&& name, std::string&& description, int8_t hp_delta = 0) : SkillBase(std::move(name), std::move(description)), hp_delta_(hp_delta) {}
-    FridayHPChangeSkill(const char* name, const char* description, int8_t hp_delta = 0) : SkillBase(name, description), hp_delta_(hp_delta) {}
+    FridayHPChangeSkill(const std::string& name, const std::string& description) : SkillBase(name, description) {}
+    FridayHPChangeSkill(std::string&& name, std::string&& description) : SkillBase(std::move(name), std::move(description)) {}
+    FridayHPChangeSkill(const char* name, const char* description) : SkillBase(name, description) {}
     virtual ~FridayHPChangeSkill() = default;
+
+    int Init(int hp_delta) {
+        hp_delta_ = hp_delta;
+        return 0;
+    }
+
 private:
     int8_t hp_delta_;
 };

@@ -13,12 +13,13 @@ namespace element {
 class CardBase {
 public:
     CardBase() = default;
-    CardBase(const char* description) : description_(description) {}
-    CardBase(const std::string& description) : description_(description) {}
-    CardBase(std::string&& description) : description_(std::move(description)) {}
+    CardBase(const std::string& name, const std::string& description) : name_(name), description_(description) {}
+    CardBase(std::string&& name, std::string&& description) : name_(name), description_(std::move(description)) {}
+    CardBase(const char* description) : name_(name), description_(description) {}
     virtual ~CardBase() = default;
 
 private:
+    std::string name_;
     std::string description_;
 };
 

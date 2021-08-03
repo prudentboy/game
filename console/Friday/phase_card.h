@@ -10,10 +10,16 @@ namespace friday {
 class FridayPhaseCard : public CardBase {
 public:
     FridayPhaseCard() = default;
-    FridayPhaseCard(const std::string& name, const std::string& description, int8_t phase) : CardBase(name, description), phase_(phase) {}
-    FridayPhaseCard(std::string&& name, std::string&& description, int8_t phase) : CardBase(std::move(name), std::move(description)), phase_(phase) {}
-    FridayPhaseCard(const char* name, const char* description, int8_t phase) : CardBase(name, description), phase_(phase) {}
+    FridayPhaseCard(const std::string& name, const std::string& description) : CardBase(name, description) {}
+    FridayPhaseCard(std::string&& name, std::string&& description) : CardBase(std::move(name), std::move(description)) {}
+    FridayPhaseCard(const char* name, const char* description) : CardBase(name, description) {}
     ~FridayPhaseCard() = default;
+
+    int Init(int phase) {
+        phase_ = phase;
+        return 0;
+    }
+
 private:
     int8_t phase_;
 };
