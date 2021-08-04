@@ -4,6 +4,16 @@
 
 namespace game {
 namespace console {
+namespace friday {
+
+enum FridayDifficulty {
+    FRIDAY_DIFFICULTY_UNDEFINED = 0,
+    FRIDAY_DIFFICULTY_BEGINNER = 1,
+    FRIDAY_DIFFICULTY_NORMAL = 2,
+    FRIDAY_DIFFICULTY_HARD = 3,
+    FRIDAY_DIFFICULTY_EXPERT = 4,
+};
+}
 
 enum CardType {
     NULL_CARDTYPE = 0,
