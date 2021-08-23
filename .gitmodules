@@ -1,0 +1,3 @@
+[submodule "thirdparty/spdlog"]
+	path = thirdparty/spdlog
+	url = git@github.com:prudentboy/spdlog.git
